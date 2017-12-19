@@ -1,0 +1,167 @@
+\hypertarget{list_8h}{}\section{src/list.h File Reference}
+\label{list_8h}\index{src/list.\+h@{src/list.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlistitem}{listitem}
+\begin{DoxyCompactList}\small\item\em Structure of list item. \end{DoxyCompactList}\item 
+struct \hyperlink{structTlist}{Tlist}
+\begin{DoxyCompactList}\small\item\em Structure of list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{list_8h_a29cf05fd2c5a415c8d20d06aa5e566b0}\label{list_8h_a29cf05fd2c5a415c8d20d06aa5e566b0}} 
+typedef struct \hyperlink{structlistitem}{listitem} \hyperlink{list_8h_a29cf05fd2c5a415c8d20d06aa5e566b0}{L\+Item}
+\begin{DoxyCompactList}\small\item\em Structure of list item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{list_8h_aa54315f2b40f6e7474a66bf2431fd68e}{list\+\_\+init} (\hyperlink{structTlist}{Tlist} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Initializing the list. \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_a37763d62fa55d0517ea23e89a481cf59}{list\+\_\+succ} (\hyperlink{structTlist}{Tlist} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Moves activity to next item in the list. \end{DoxyCompactList}\item 
+bool \hyperlink{list_8h_addb7fe6e69f54e0c391020944a084255}{list\+\_\+insert} (\hyperlink{structTlist}{Tlist} $\ast$list, char $\ast$word)
+\begin{DoxyCompactList}\small\item\em Inserts new item to the list. \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_afb9d13c41856f6f4b4291dd07f14d80a}{list\+\_\+dispose} (\hyperlink{structTlist}{Tlist} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Disposes list. \end{DoxyCompactList}\item 
+bool \hyperlink{list_8h_a23afddbadc572ea812af1da4177eaf4b}{is\+\_\+list\+\_\+empty} (\hyperlink{structTlist}{Tlist} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Checks, if the list is empty. \end{DoxyCompactList}\item 
+int \hyperlink{list_8h_a0a98a478f0e7cf906a8167e7628ce0b7}{list\+\_\+length} (\hyperlink{structTlist}{Tlist} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Gets length of he list. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{list_8h_af36f96bf72b841e13e39e0cbdd0478d9}{list\+\_\+get\+\_\+data} (\hyperlink{structTlist}{Tlist} $\ast$list, int index)
+\begin{DoxyCompactList}\small\item\em Gets data from the list at secific index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file of list structure
+
+\begin{DoxyAuthor}{Author}
+Jakub Majzlik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{list_8h_a23afddbadc572ea812af1da4177eaf4b}\label{list_8h_a23afddbadc572ea812af1da4177eaf4b}} 
+\index{list.\+h@{list.\+h}!is\+\_\+list\+\_\+empty@{is\+\_\+list\+\_\+empty}}
+\index{is\+\_\+list\+\_\+empty@{is\+\_\+list\+\_\+empty}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{is\+\_\+list\+\_\+empty()}{is\_list\_empty()}}
+{\footnotesize\ttfamily bool is\+\_\+list\+\_\+empty (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Checks, if the list is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Is empty 
+
+false Is not empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{list_8h_afb9d13c41856f6f4b4291dd07f14d80a}\label{list_8h_afb9d13c41856f6f4b4291dd07f14d80a}} 
+\index{list.\+h@{list.\+h}!list\+\_\+dispose@{list\+\_\+dispose}}
+\index{list\+\_\+dispose@{list\+\_\+dispose}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+dispose()}{list\_dispose()}}
+{\footnotesize\ttfamily void list\+\_\+dispose (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Disposes list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{list_8h_af36f96bf72b841e13e39e0cbdd0478d9}\label{list_8h_af36f96bf72b841e13e39e0cbdd0478d9}} 
+\index{list.\+h@{list.\+h}!list\+\_\+get\+\_\+data@{list\+\_\+get\+\_\+data}}
+\index{list\+\_\+get\+\_\+data@{list\+\_\+get\+\_\+data}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+get\+\_\+data()}{list\_get\_data()}}
+{\footnotesize\ttfamily char$\ast$ list\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets data from the list at secific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+{\em index} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ Data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{list_8h_aa54315f2b40f6e7474a66bf2431fd68e}\label{list_8h_aa54315f2b40f6e7474a66bf2431fd68e}} 
+\index{list.\+h@{list.\+h}!list\+\_\+init@{list\+\_\+init}}
+\index{list\+\_\+init@{list\+\_\+init}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+init()}{list\_init()}}
+{\footnotesize\ttfamily void list\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Initializing the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{list_8h_addb7fe6e69f54e0c391020944a084255}\label{list_8h_addb7fe6e69f54e0c391020944a084255}} 
+\index{list.\+h@{list.\+h}!list\+\_\+insert@{list\+\_\+insert}}
+\index{list\+\_\+insert@{list\+\_\+insert}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+insert()}{list\_insert()}}
+{\footnotesize\ttfamily bool list\+\_\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list,  }\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Inserts new item to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+{\em word} & Item \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{list_8h_a0a98a478f0e7cf906a8167e7628ce0b7}\label{list_8h_a0a98a478f0e7cf906a8167e7628ce0b7}} 
+\index{list.\+h@{list.\+h}!list\+\_\+length@{list\+\_\+length}}
+\index{list\+\_\+length@{list\+\_\+length}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+length()}{list\_length()}}
+{\footnotesize\ttfamily int list\+\_\+length (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Gets length of he list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Length of the list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{list_8h_a37763d62fa55d0517ea23e89a481cf59}\label{list_8h_a37763d62fa55d0517ea23e89a481cf59}} 
+\index{list.\+h@{list.\+h}!list\+\_\+succ@{list\+\_\+succ}}
+\index{list\+\_\+succ@{list\+\_\+succ}!list.\+h@{list.\+h}}
+\subsubsection{\texorpdfstring{list\+\_\+succ()}{list\_succ()}}
+{\footnotesize\ttfamily void list\+\_\+succ (\begin{DoxyParamCaption}\item[{\hyperlink{structTlist}{Tlist} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Moves activity to next item in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List \\
+\hline
+\end{DoxyParams}

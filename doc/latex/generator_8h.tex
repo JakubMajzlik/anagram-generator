@@ -1,0 +1,42 @@
+\hypertarget{generator_8h}{}\section{src/generator.h File Reference}
+\label{generator_8h}\index{src/generator.\+h@{src/generator.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{generator_8h_af91dece599ec8f9c2c304c9b3d05cb45}{generate\+\_\+anagram} (char $\ast$$\ast$word)
+\begin{DoxyCompactList}\small\item\em Generate anagram from string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file of anagram generator
+
+\begin{DoxyAuthor}{Author}
+Jakub Majzlik 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{generator_8h_af91dece599ec8f9c2c304c9b3d05cb45}\label{generator_8h_af91dece599ec8f9c2c304c9b3d05cb45}} 
+\index{generator.\+h@{generator.\+h}!generate\+\_\+anagram@{generate\+\_\+anagram}}
+\index{generate\+\_\+anagram@{generate\+\_\+anagram}!generator.\+h@{generator.\+h}}
+\subsubsection{\texorpdfstring{generate\+\_\+anagram()}{generate\_anagram()}}
+{\footnotesize\ttfamily bool generate\+\_\+anagram (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Generate anagram from string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & String from which anagram will be generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Generating of anagram went without problem. 
+
+false Coudn\textquotesingle{}t alloc memory for temp string. 
+\end{DoxyReturn}

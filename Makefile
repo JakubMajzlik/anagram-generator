@@ -11,13 +11,13 @@ FILES = *.c
 all: bin
 
 
-generator.o: src/generator.c
+obj/generator.o: src/generator.c
 	$(CC) $(CFLAGS) -c src/generator.c -o obj/generator.o
 
-list.o: src/list.c
+obj/list.o: src/list.c
 	$(CC) $(CFLAGS) -c src/list.c -o obj/list.o
 
-main.o: src/main.c
+obj/main.o: src/main.c
 	$(CC) $(CFLAGS) -c src/main.c -o obj/main.o
 
 bin: obj/main.o obj/list.o obj/generator.o
@@ -25,7 +25,7 @@ bin: obj/main.o obj/list.o obj/generator.o
 
 
 run:
-	./bin/$(BIN) bin/wordlist.txt
+	./bin/$(BIN)
 pack:
 	tar -cvzf $(LOGIN).tar.gz -C src src/$(FILES) .
 

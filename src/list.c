@@ -1,3 +1,10 @@
+/**
+ * Source file of list structure
+ * @file list.c
+ * @author Jakub Majzlik
+ * @version 1.0
+ */
+
 #include "list.h"
 
 #include <stdlib.h>

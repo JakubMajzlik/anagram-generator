@@ -1,12 +1,17 @@
+/**
+ * Header file of list structure
+ * @file list.h
+ * @author Jakub Majzlik
+ * @version 1.0
+ */
 
 #ifndef LIST_H
 #define LIST_H
 
 #include <stdbool.h>
 
-
 /**
- * @brief Struktura polozky zoznamu
+ * @brief Structure of list item
  * 
  */
 typedef struct listitem
@@ -17,7 +22,7 @@ typedef struct listitem
 }LItem;
 
 /**
- * @brief Struktura zoznamu instrukcii
+ * @brief Structure of list
  * 
  */
 typedef struct
@@ -28,46 +33,58 @@ typedef struct
 }Tlist;
 
 /**
- * @brief Funkcia inicializuje zoznam instrukcii
+ * @brief Initializing the list
  * 
- * @param list Zoznam, ktory chceme inicializovat
+ * @param list List
  */
 void list_init(Tlist *list);
 
 /**
- * @brief Funkcia posunie aktivitu o jednu polozku doprava
+ * @brief Moves activity to next item in the list
  * 
- * @param list Zoznam, v ktorom chceme aktivitu posunut
+ * @param list List
  */
 void list_succ(Tlist *list);
 
 /**
- * @brief Funkcia vlozi instrukciu na koniec zoznamu
+ * @brief Inserts new item to the list
  * 
- * @param list Zoznam, do ktoreho chceme vlozit instrukciu
- * @param inst Instrukcia, ktoru chceme vlozit
+ * @param list List
+ * @param word Item
  */
 bool list_insert(Tlist *list, char *word);
 
 /**
- * @brief 
+ * @brief Disposes list
  * 
- * @param list 
+ * @param list List
  */
 void list_dispose(Tlist *list);
 
 /**
- * @brief Funkcia skontroluje, ci je zoznam prazdny
+ * @brief Checks, if the list is empty
  * 
- * @param list Zoznam, ktory chceme skontrolovat
- * @return true Vrati true ak je zoznam prazdny
- * @return false Vrati false ak zoznam nie je prazdny
+ * @param list List
+ * @return true Is empty
+ * @return false Is not empty
  */
 bool is_list_empty(Tlist *list);
 
+/**
+ * @brief Gets length of he list
+ * 
+ * @param list List
+ * @return int Length of the list
+ */
 int list_length(Tlist *list);
 
+/**
+ * @brief Gets data from the list at secific index
+ * 
+ * @param list List
+ * @param index Index
+ * @return char* Data
+ */
 char *list_get_data(Tlist *list, int index);
-
 
 #endif

@@ -1,3 +1,10 @@
+/**
+ * Header file of anagram generator
+ * @file generator.h
+ * @author Jakub Majzlik
+ * @version 1.0
+ */
+
 #ifndef __GENERATOR_H__
 #define __GENERATOR_H__
 

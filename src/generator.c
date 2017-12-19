@@ -1,3 +1,10 @@
+/**
+ * Source file of anagram generator
+ * @file generator.c
+ * @author Jakub Majzlik
+ * @version 1.0
+ */
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

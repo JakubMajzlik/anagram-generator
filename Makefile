@@ -1,4 +1,6 @@
-#Simple Makefile for c program
+# Makefile for program
+# Author: Jakub Majjzlik
+# Version: 1.0
 
 CC = gcc
 CFLAGS = -std=c99 -Wall -Wextra -pedantic

@@ -5,11 +5,8 @@
 CC = gcc
 CFLAGS = -std=c99 -Wall -Wextra -pedantic
 BIN = anagramgenerator
-LOGIN = xmajzl02
-FILES = *.c
 
-all: bin
-
+all:init bin
 
 obj/generator.o: src/generator.c
 	$(CC) $(CFLAGS) -c src/generator.c -o obj/generator.o
@@ -26,11 +23,6 @@ bin: obj/main.o obj/list.o obj/generator.o
 
 run:
 	./bin/$(BIN)
-pack:
-	tar -cvzf $(LOGIN).tar.gz -C src src/$(FILES) .
-
-pack-project:
-	tar -cvzf $(LOGIN).tar.gz src/$(FILES) doc/* Makefile
 
 init:
 	@if [ ! -d "src" ]; then\
